@@ -1,14 +1,23 @@
 * {
-  /* scroll-behavior: smooth !important; */
+  scroll-behavior: smooth !important;
+}
+
+:root {
+  /* Dark Mode */
+  --dark-main-color: #000000;
+  --dark-secondary-color: #121212;
+  --dark-accent-color: #252525;
+  --dark-main-text-color: #ffff;
+  --dark-secondary-text-color: rgba(255, 255, 255, 0.7);
 }
 
 body {
   background-color: rgba(0, 0, 0, 0.01) !important;
   font-family: "Poppins", sans-serif;
-  background-attachment: fixed;
+  overflow-x: hidden;
 }
 
-/* Navbar */
+/* * Navbar */
 nav {
   background: rgb(2, 0, 36);
   background: linear-gradient(
@@ -31,9 +40,9 @@ nav {
   cursor: pointer;
 }
 
-/* Intro Section */
-.introSection {
-  height: 94vh !important;
+/* * Section One - Intro Section */
+.section-one-intro {
+  height: 93vh;
   background: url(./img/overlay-bg.jpg);
   background-position: center;
   background-repeat: none;
@@ -45,85 +54,7 @@ nav {
   width: 200px;
 }
 
-.bottommotion {
-  position: absolute;
-  bottom: 5px;
-  left: 48%;
-  text-align: center;
-}
-
-i.fas {
-  font-size: 40px;
-  margin-top: 0px !important;
-  padding-top: 0px !important;
-}
-
-.introRow {
-  padding-top: 25% !important;
-}
-
-.introTitle {
-  font-weight: 600;
-}
-
-@media only screen and (max-width: 576px) {
-  .introText {
-    font-size: 20px;
-    font-weight: bold;
-    letter-spacing: 2px;
-  }
-  .introExtraText {
-    font-size: 14px;
-    text-align: left !important;
-  }
-  .introContainer {
-    padding-top: 0 !important;
-  }
-  .introRow {
-    padding-top: 0 !important;
-    margin-top: 0 !important;
-  }
-  .introImage {
-    text-align: center !important;
-    padding-left: 10% !important;
-    padding-bottom: 20px !important;
-  }
-  .introCard {
-    margin-bottom: 20px !important;
-  }
-  .bottommotion {
-    left: 40% !important;
-  }
-  .landingCard {
-    margin-left: 5%;
-  }
-}
-
-@media only screen and (max-width: 768px) {
-  .introText {
-    font-size: 26px;
-    font-weight: bold;
-    letter-spacing: 2px;
-  }
-  .introExtraText {
-    font-size: 14px;
-    text-align: left !important;
-  }
-}
-
-@media only screen and (min-width: 768px) {
-  .introText {
-    font-size: 50px;
-    font-weight: bold;
-    letter-spacing: 2px;
-  }
-  .introExtraText {
-    font-size: 14px;
-    text-align: left !important;
-  }
-}
-
-.introCard {
+.section-one-card {
   border-radius: 20px !important;
   border: 0.1px solid rgba(0, 0, 0, 0.05) !important;
   position: relative;
@@ -134,6 +65,7 @@ i.fas {
 }
 
 .arrowDownIcon {
+  font-size: 35px;
   font-weight: 600;
   background: -webkit-linear-gradient(#2980b9, #6dd5fa, #ffffff) !important;
   -webkit-background-clip: text !important;
@@ -141,79 +73,49 @@ i.fas {
   -webkit-text-fill-color: transparent !important;
 }
 
-@media only screen and (min-width: 768px) {
+@media (min-width: 768px) {
   .introRow {
-    padding-top: 15% !important;
+    padding-top: 20%;
+  }
+  .profileImageCol {
+    float: end !important;
+  }
+
+  .bottommotion {
+    margin-top: 15%;
   }
 }
 
-@media only screen and (min-width: 992px) {
-  .introRow {
-    padding-top: 10% !important;
-  }
+/* * Section Two - My Work */
+.section-two-my-work {
+  background-color: var(--dark-main-color);
 }
 
-/* Section One - My Work */
-.sectionOne {
-  background: url(./img/y-so-serious.png);
+.accordion {
+  background: var(--dark-secondary-color);
+  border-radius: 12px;
+  color: var(--dark-main-text-color);
 }
 
-.myWorkText {
-  font-weight: 600;
-  background: -webkit-linear-gradient(#da4171, #242d86) !important;
-  -webkit-background-clip: text !important;
-  background-clip: text;
-  -webkit-text-fill-color: transparent !important;
+.accordion-header,
+.accordion-button {
+  color: var(--dark-main-text-color);
 }
 
-.flt {
-  border-radius: 20px !important;
+.accordion-body {
+  background-color: #7f5a83;
+  background-image: linear-gradient(315deg, #7f5a83 0%, #0d324d 74%);
+  border-radius: 12px;
 }
 
-.customPadding {
-  padding: 0 !important;
-  margin-left: 5px !important;
+.fscalcImage {
+  border-radius: 8px;
 }
 
-.customCol {
-  border-radius: 25px !important;
-  /*? Frosted Glass */
-  position: relative !important;
-  box-shadow: 0 25px 50px rgba (0, 0, 0, 0.2) !important;
-  background: transparent !important;
-  backdrop-filter: blur(2px) !important;
-  -webkit-backdrop-filter: blur(2px) !important;
-}
-
-.appstoreLink {
-  font-weight: 500;
-  text-decoration: none !important;
-}
-
-.introName {
-  font-size: 17px;
-  font-weight: 500;
-  letter-spacing: 5px;
-}
-
-/* Section Two - SKILLS */
-.sectionTwo {
-  background-color: rgb(29, 29, 29);
-}
-
-.skillsCard {
-  border-radius: 20px !important;
-  background-color: #307bad59 !important;
-}
-
-.lastTextSkills {
-  text-align: center;
-}
-
-.githubBtn {
-  font-weight: 500 !important;
-  border-radius: 18px !important;
-  font-size: 18px !important;
+/* * Section Three - Skills */
+.section-three-skills {
+  background-color: #485461;
+  background-image: linear-gradient(315deg, #485461 0%, #28313b 74%);
 }
 
 .experienceInfo {
@@ -221,93 +123,63 @@ i.fas {
   border-radius: 18px;
 }
 
-/* Section Three - Hire Me */
-.sectionThree {
-  background-color: rgb(29, 29, 29);
-}
-
-.form-control {
-  border-radius: 12px !important;
-  padding: 8px 15px !important;
-}
-
-.form-control:focus,
-button:focus,
-.navBtn:focus {
-  box-shadow: none !important;
-  outline: none;
-}
-
-.contactCard {
-  border-radius: 24px !important;
-  outline: none !important;
-  border: none !important;
-  box-shadow: 0 8px 20px 6px rgba(0, 0, 0, 0.1);
-  background-color: rgba(255, 255, 255, 0.87) !important;
-}
-
-.contactBtn {
+.skillsCard {
   border-radius: 20px !important;
-  font-weight: 500 !important;
+  background-color: rgba(0, 0, 0, 0.3);
+  box-shadow: 0 10px 12px 0px rgba(0, 0, 0, 0.2);
 }
 
-input,
-textarea {
-  background-color: rgba(128, 128, 128, 0.08) !important;
-  border: none !important;
+/* * Section Four - Education */
+
+.section-four-education {
+  background: url(./img/y-so-serious.png);
 }
 
-.sectionThreeLocationText {
-  font-weight: 400;
+.educationCard {
+  border-radius: 18px;
+  /* background-color: var(--dark-accent-color); */
+  background-color: #485461;
+  background-image: linear-gradient(315deg, #485461 0%, #28313b 75%);
 }
 
-@media screen and (max-width: 992px) {
-  .customCenter {
-    text-align: center;
-    padding-top: 15px !important;
-  }
+.coursesAccordian {
+  background-color: #485461;
 }
 
-/* Section Four - EDUCATION */
-.sectionfour {
-  background-image: url(/img/cool-bg.png);
-  background-position: center;
-  background-repeat: none;
-  background-size: cover;
-}
-.customCard {
-  border-radius: 20px !important;
-  border: 1px solid rgba(0, 0, 0, 0.1) !important;
-  /* box-shadow: 0 15px 20px rgba(0, 0, 0, 0.05) !important; */
-  position: relative !important;
-  box-shadow: 0 25px 50px rgba (0, 0, 0, 0.2) !important;
-  background: transparent !important;
-  backdrop-filter: blur(6px) !important;
-  -webkit-backdrop-filter: blur(6px) !important;
-}
-.customText {
-  font-weight: 600 !important;
-}
-
-.educationTitle {
-  font-weight: 600;
-  background: -webkit-linear-gradient(#e96443, #904e95) !important;
-  -webkit-background-clip: text !important;
-  background-clip: text;
-  -webkit-text-fill-color: transparent !important;
-}
-
-.card-img-top {
-  border-top-left-radius: 20px !important;
-  border-top-right-radius: 20px !important;
-}
-
-.fa-hand-sparkles {
-  color: blue;
-  transform: rotate(-10deg);
+.educationAccordionBody {
+  background: var(--dark-accent-color) !important;
 }
 
 .fa-angle-double-right {
-  font-size: 18px !important;
-  color: rgba(119, 0, 255, 0.568);
+  font-size: 15px !important;
+  /* color: rgba(119, 0, 255, 0.568) !important; */
+  color: var(--dark-secondary-text-color);
+}
+
+/* * Section Five - Hire Me */
+
+.section-five {
+  background: var(--dark-main-color);
+}
+
+.contactCard {
+  border-radius: 18px;
+  background-color: var(--dark-secondary-color);
+}
+
+.form-control,
+.form-control:active,
+.form-control:focus {
+  background: var(--dark-accent-color) !important;
+  outline: none !important;
+  border: none !important;
+  color: var(--dark-secondary-text-color) !important;
+}
+
+input::placeholder,
+input:focus::placeholder,
+textarea::placeholder {
+  background: var(--dark-accent-color);
+  opacity: 1;
+  color: var(--dark-secondary-text-color) !important;
 }
